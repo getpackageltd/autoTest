@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="GetPackageAutomation" verbose="2" thread-count="1"
+       parallel="false">
+    <listeners>
+        <listener class-name="com.GP.base.TestListener"></listener>
+    </listeners>
+
+    <test name="GetPackageAutomationTest">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.GP.GPAutomationTest">
+                <parameter name="no" value="1" />
+                <parameter name="User Name" value="tomer.levi@getpackage.com" />
+                <parameter name="Password" value="303048821a" />
+            </class>
+        </classes>
+    </test>
+</suite>
