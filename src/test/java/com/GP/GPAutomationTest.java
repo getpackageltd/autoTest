@@ -32,6 +32,7 @@ public class GPAutomationTest extends BaseTest {
 
         // Open Get Package page https://stg-web.getpackage.com
         logInPage.openLogInPage();
+
         Reporter.log("Application Lauched successfully ! ");
         logInPage.fillUpEmailAndPassword(userName, password);
         logInPage.pushSignInButton();

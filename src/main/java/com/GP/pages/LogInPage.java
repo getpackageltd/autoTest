@@ -22,6 +22,7 @@ public class LogInPage extends BasePageObject<LogInPage> {
 
         GetPackageURL = PropirtiesTest.getInstance().getProperty("LogInURL");
         getPage(GetPackageURL);
+        Thread.sleep(5000);
 
     }
 
