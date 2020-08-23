@@ -20,7 +20,6 @@ public class GPAutomationTest extends BaseTest {
         testNumber = testNum;
         userName = userN;
         password = psw;
-
     }
 
     @Test(description = "Open Get package website", priority = 1) // , enabled = true

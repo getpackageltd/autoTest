@@ -4,6 +4,8 @@
        parallel="false">
     <listeners>
         <listener class-name="com.GP.base.TestListener"></listener>
+        <listener class-name="com.GP.base.CustomizedEmailableReport"></listener>
+        <listener class-name="com.GP.base.TestNGCustomReportListener"></listener>
     </listeners>
 
     <test name="GetPackageAutomationTest">

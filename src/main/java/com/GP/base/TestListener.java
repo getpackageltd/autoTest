@@ -1,6 +1,8 @@
 package com.GP.base;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.Reporter;
@@ -8,7 +10,7 @@ import org.testng.TestListenerAdapter;
 
 public class TestListener extends TestListenerAdapter {
 
-    protected Logger log = Logger.getLogger(TestListener.class);;
+    private static final Logger log = LogManager.getLogger(TestListener.class);
 
     @Override
     public void onTestSuccess(ITestResult tr) {

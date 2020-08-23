@@ -6,7 +6,9 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+//import org.apache.logging.log4j.core.Logger;    //log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -25,12 +27,12 @@ public class BaseTest {
     @BeforeTest
     protected void setUpTest(ITestContext ctx,String browser) {
         String testName = ctx.getCurrentXmlTest().getName();
-        log = Logger.getLogger(testName);
+        log = LogManager.getLogger(testName);
         driver = BrowserFactory.getDriver(browser, log);
         sanpDriver = driver;
-        log.info("================================================================================");
-        log.info("Starting New Test");
-        log.info("================================================================================");
+        log.trace("================================================================================");
+        log.trace("Starting New Test");
+        log.trace("================================================================================");
     }
 
     @AfterTest
