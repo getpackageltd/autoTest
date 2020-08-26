@@ -1,5 +1,4 @@
 package com.GP;
-import com.GP.base.BasePageObject;
 import com.GP.base.BaseTest;
 import com.GP.pages.OPstgLogInPage;
 import org.testng.Reporter;

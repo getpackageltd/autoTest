@@ -40,12 +40,12 @@ public class BrowserFactory {
                 WebDriverManager.chromedriver().setup();
 
                 //OS = System.getProperty("os.name");
-                ChromeOptions options = new ChromeOptions();
+                /*ChromeOptions options = new ChromeOptions();
                 options.addArguments("--headless");
                 options.addArguments("window-size=1200x600");
 
-                driver = new ChromeDriver(options);
-                //driver = new ChromeDriver();
+                driver = new ChromeDriver(options);*/
+                driver = new ChromeDriver();
 
                 break;
 

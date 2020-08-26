@@ -61,7 +61,7 @@ public class OPstgLogInPage extends BasePageObject<OPstgLogInPage> {
         //waitForVisibilityOf(errorMessage,5);
         Thread.sleep(1000);
         String errorMessageText = getText(errorMessage);
-        String expectedErrorMessageText = "Legacy: {\"email\":[\"This field may not be blank.\"]}";
+        String expectedErrorMessageText = "{\"email\":[\"This field may not be blank.\"]}";
         Assert.assertEquals(errorMessageText, expectedErrorMessageText);
     }
 
@@ -69,7 +69,7 @@ public class OPstgLogInPage extends BasePageObject<OPstgLogInPage> {
     public void verifyNoPasswordErrorPresented() throws InterruptedException {
         Thread.sleep(1000);
         String pErrorMessageText = getText(errorMessage);
-        String pExpectedErrorMessageText = "Legacy: {\"password\":[\"This field may not be blank.\"]}";
+        String pExpectedErrorMessageText = "{\"password\":[\"This field may not be blank.\"]}";
         Assert.assertEquals(pErrorMessageText, pExpectedErrorMessageText);
     }
 
@@ -77,7 +77,7 @@ public class OPstgLogInPage extends BasePageObject<OPstgLogInPage> {
     public void verifyWrongEmailOrPasswordErrorPresented() throws InterruptedException {
         Thread.sleep(1000);
         String wErrorMessageText = getText(errorMessage);
-        String wExpectedErrorMessageText = "Legacy: Email or password are wrong";
+        String wExpectedErrorMessageText = "Email or password are wrong";
         Assert.assertEquals(wErrorMessageText, wExpectedErrorMessageText);
     }
 

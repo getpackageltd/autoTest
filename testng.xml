@@ -38,4 +38,14 @@
             </class>
         </classes>
     </test>
+    <test name="OPSanityTest">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.GP.OPSanityTest">
+                <parameter name="no" value="4" />
+                <parameter name="User Name" value="tomer.levi@getpackage.com" />
+                <parameter name="Password" value="303048821a" />
+            </class>
+        </classes>
+    </test>
 </suite>
