@@ -47,6 +47,9 @@ public class BasePageObject<T> {
         driver.navigate().back();
     }
 
+    // Refresh page
+    protected void refreshPage(){driver.navigate().refresh();}
+
     // Type text
     protected void type(String text, By element) {
         find(element).sendKeys(text);

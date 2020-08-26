@@ -12,7 +12,9 @@ public class LogInPage extends BasePageObject<LogInPage> {
     private By emailField = By.id("login_email_field");
     private By passwordField = By.id("password_field");
     private By signInButton = By.id("sign_in_email_btn");
+
     String GetPackageURL = "";
+
 
     public LogInPage(WebDriver driver, Logger log) {
         super(driver, log);
@@ -22,8 +24,8 @@ public class LogInPage extends BasePageObject<LogInPage> {
 
         GetPackageURL = PropirtiesTest.getInstance().getProperty("LogInURL");
         getPage(GetPackageURL);
-        Thread.sleep(5000);
-
+        waitForVisibilityOf(signInButton,5);
+        //Thread.sleep(5000);
     }
 
     public synchronized void fillUpEmailAndPassword(String email, String password) throws Exception {
