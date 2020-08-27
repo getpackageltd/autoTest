@@ -42,7 +42,56 @@ public class OPSanityTest extends BaseTest {
         Reporter.log("OP opened.");
     }
 
-    @Test(description = "Log Out from Operator Portal", priority = 2) // , enabled = true
+
+    @Test(description = "Select Deliveries Tab", priority = 2) // , enabled = true
+    public void selectDeliveriesTab() throws Exception {
+
+        if (operatorPortalPagePos == null) {
+            operatorPortalPagePos = new OperatorPortalPage(driver, log);
+        }
+
+        // Select Deliveries Tab
+        operatorPortalPagePos.clickOnDeliveriesTab();
+        Reporter.log("Deliveries Tab selected");
+    }
+
+    @Test(description = "Select Routes Tab", priority = 3) // , enabled = true
+    public void selectRoutesTab() throws Exception {
+
+        if (operatorPortalPagePos == null) {
+            operatorPortalPagePos = new OperatorPortalPage(driver, log);
+        }
+
+        // Select Routes Tab
+        operatorPortalPagePos.clickOnRoutesTab();
+        Reporter.log("Routes Tab selected");
+    }
+
+    @Test(description = "Select Excluded Tab", priority = 4) // , enabled = true
+    public void selectExcludedTab() throws Exception {
+
+        if (operatorPortalPagePos == null) {
+            operatorPortalPagePos = new OperatorPortalPage(driver, log);
+        }
+
+        // Select Excluded Tab
+        operatorPortalPagePos.clickOnExcludedTab();
+        Reporter.log("Excluded Tab selected");
+    }
+
+    @Test(description = "Return to Deliveries Tab", priority = 5) // , enabled = true
+    public void returnToDeliveriesTab() throws Exception {
+
+        if (operatorPortalPagePos == null) {
+            operatorPortalPagePos = new OperatorPortalPage(driver, log);
+        }
+
+        // Select Deliveries Tab
+        operatorPortalPagePos.clickOnDeliveriesTab();
+        Reporter.log("Deliveries Tab selected");
+    }
+
+    @Test(description = "Log Out from Operator Portal", priority = 6) // , enabled = true
     public void logOut() throws Exception {
 
         if (operatorPortalPagePos == null) {
